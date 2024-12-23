@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompareWithCurrentJobActivity">
+
+
+    <!-- App Name at the top -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:text="CompareJobs"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="spread"
+        android:padding="16dp"/>
+
+    <!-- Job offer comparison results text view-->
+    <TextView
+        android:id="@+id/textViewSettings"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Current Job vs. Saved Offers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
+
+
+    <!-- Job Comparison Table -->
+    <TableLayout
+        android:id="@+id/tableJobOffers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:stretchColumns="1,2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewSettings">
+
+        <!-- Table Row for Titles -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text=""
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Current Job"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="The Saved Offer"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- Row for Title -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Title:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/job1Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Software Engineer" />
+
+            <TextView
+                android:id="@+id/job2Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Product Manager" />
+        </TableRow>
+
+        <!-- Row for Company -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Company:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/job1Company"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Company A" />
+
+            <TextView
+                android:id="@+id/job2Company"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Company B" />
+        </TableRow>
+
+        <!-- Row for City -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="City:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/job1City"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="San Francisco" />
+
+            <TextView
+                android:id="@+id/job2City"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="New York" />
+        </TableRow>
+        <!-- Row for State -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="State:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/job1State"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="CA" />
+
+            <TextView
+                android:id="@+id/job2State"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="NY" />
+        </TableRow>
+        <TableRow>
+            <!-- Row for  Index %  -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Index(%):"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/job1Index"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="5" />
+
+            <TextView
+                android:id="@+id/job2Index"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="8" />
+        </TableRow>
+
+        <!-- Row for Yearly Salary -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Yearly Salary:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/job1Salary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="$120,000" />
+
+            <TextView
+                android:id="@+id/job2Salary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="$110,000" />
+        </TableRow>
+
+        <!-- Row for  Yearly Bonus  -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Yearly Bonus:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/job1Bonus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="$10,000" />
+
+            <TextView
+                android:id="@+id/job2Bonus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="$8,000" />
+        </TableRow>
+
+
+
+        <!-- Row for Restricted Stock  -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Restricted Stock:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/job1RSU"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="$15,000" />
+
+            <TextView
+                android:id="@+id/job2RSU"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="$10,000" />
+        </TableRow>
+
+        <!-- Row for Personalized Learning & Development (PLD) -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Personalized Learning and Development:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/job1PLD"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="$80" />
+
+            <TextView
+                android:id="@+id/job2PLD"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="$60" />
+        </TableRow>
+
+        <!-- Row for Family Planning Assistance (FPA) -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Family Planning Assistance:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/job1FPA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="$30" />
+
+            <TextView
+                android:id="@+id/job2FPA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="$20" />
+        </TableRow>
+
+        <!-- Row for Retirement -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Retirement (%):"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/job1Retirement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="5%" />
+
+            <TextView
+                android:id="@+id/job2Retirement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="4%" />
+        </TableRow>
+
+    </TableLayout>
+
+
+    <Button
+        android:id="@+id/cancelCompareCurrentJobs"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#2196F3"
+        android:text="Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tableJobOffers"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

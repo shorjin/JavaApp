@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#2196F3"
+    tools:context=".CurrentJobDetailsActivity">
+
+
+    <!-- App Name at the top -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:padding="16dp"
+        android:text="CompareJobs"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="spread" />
+
+
+    <!-- current job detail text view-->
+    <TextView
+        android:id="@+id/textViewNewJobOffer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="Current Job Details"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/TextLayoutTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
+
+
+    <!--title-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextLayoutTitle"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Title"
+        android:paddingBottom="0dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--company -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextLayoutCompany"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Company"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        app:endIconMode="clear_text"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextLayoutTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- City -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextLayoutCity"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="5dp"
+        android:hint="City"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toStartOf="@+id/TextLayoutState"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextLayoutCompany">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditCity"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- State -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextLayoutState"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="16dp"
+        android:hint="State"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextLayoutCity"
+        app:layout_constraintTop_toBottomOf="@+id/TextLayoutCompany">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="2" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Index -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextLayoutIndex"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="5dp"
+        android:hint="Index (%)"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toStartOf="@+id/TextLayoutSalary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextLayoutCity">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditIndex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Salary -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextLayoutSalary"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Salary"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextLayoutIndex"
+        app:layout_constraintTop_toBottomOf="@+id/TextLayoutState"
+        app:prefixText="$">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--    Bonus-->
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/TextLayoutBonus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="5dp"
+        android:hint="Bonus"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toStartOf="@+id/TextLayoutStock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextLayoutIndex"
+        app:prefixText="$">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditBonus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- restricted stock-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextLayoutStock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Restricted Stock"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextLayoutBonus"
+        app:layout_constraintTop_toBottomOf="@+id/TextLayoutSalary"
+        app:prefixText="$">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- Personalized Learning & Development -->
+
+    <!-- Personalized Learning Development -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextLayoutLearning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="5dp"
+        android:hint="P-Learning Dev"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@drawable/baseline_error_24"
+        app:layout_constraintEnd_toStartOf="@+id/TextLayoutAssistance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextLayoutBonus"
+        app:prefixText="$"
+        app:tooltipText="Personalized Learning Development">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditLearning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Family Planning Assistance -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextLayoutAssistance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Family Plan Assist"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@drawable/baseline_error_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextLayoutLearning"
+        app:layout_constraintTop_toBottomOf="@+id/TextLayoutStock"
+        app:prefixText="$"
+        app:tooltipText="Family Planning Assistance">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditAssistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Retirement -->
+    <TextView
+        android:id="@+id/RetirementTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBarRetirement"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarRetirement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekBarRetirement"
+        tools:text="Retirement 0%" />
+
+    <SeekBar
+        android:id="@+id/seekBarRetirement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:max="100"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/RetirementTextView"
+        app:layout_constraintTop_toBottomOf="@+id/TextLayoutAssistance" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="#2196F3"
+        android:text="Save"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEdit"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarRetirement" />
+
+    <Button
+        android:id="@+id/buttonEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="#2196F3"
+        android:text="Edit"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCancel"
+        app:layout_constraintStart_toEndOf="@+id/buttonSave"
+
+        app:layout_constraintTop_toBottomOf="@+id/seekBarRetirement" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#2196F3"
+        android:text="Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonEdit"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarRetirement" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
