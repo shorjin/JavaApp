@@ -6,3 +6,10 @@
 
 Ui as below:
 ![Alt text](https://github.com/shorjin/JavaApp/blob/main/UiImage/1.png)
+![Alt text](https://github.com/shorjin/JavaApp/blob/main/UiImage/2.png)
+![Alt text](https://github.com/shorjin/JavaApp/blob/main/UiImage/3.png)
+![Alt text](https://github.com/shorjin/JavaApp/blob/main/UiImage/4.png)
+![Alt text](https://github.com/shorjin/JavaApp/blob/main/UiImage/5.png)
+![Alt text](https://github.com/shorjin/JavaApp/blob/main/UiImage/6.png)
+![Alt text](https://github.com/shorjin/JavaApp/blob/main/UiImage/7.png)
+![Alt text](https://github.com/shorjin/JavaApp/blob/main/UiImage/8.png)
